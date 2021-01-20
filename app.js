@@ -175,10 +175,19 @@ console.log(person5.friends);
 
 /**
  * Problem with the constructor function: Every object has its own instance of the function.
- * Problem wit hthe prototype: Modifying a property usinig one object reflects the other object aswell.
+ * Problem with the prototype: Modifying a property usinig one object reflects the other object aswell.
  * To solve both problems, we can define all the object-specific properties iinside the constructor and all shared properties and methods inside the prototype.
  */
 
 // Object.create()
+
+class Boo {
+	constructor() {
+		alert('Boo, you have been spooked!');
+	}
+}
+
+// const boo1 = Object.create(Boo.prototype);
+// const boo2 = new Boo();
 
 // Avoiding global variables

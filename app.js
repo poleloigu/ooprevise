@@ -107,10 +107,29 @@ class Adult extends Human {
 }
 const adult = new Adult('Jenny', 'De Buck', 39, 'master');
 
-console.log(adult);
-console.log(adult.hello());
-console.log(adult.humanGreeting());
-console.log(adult.nationality);
+// console.log(adult);
+// console.log(adult.hello());
+// console.log(adult.humanGreeting());
+// console.log(adult.nationality);
+
+class Male extends Adult {
+	constructor(first, last, age, degree, cars) {
+		super(first, last, age, degree);
+		this.cars = cars;
+	}
+	hello() {
+		console.log('Hello, I am a male');
+	}
+	maleGreeting() {
+		console.log('Male!!!');
+	}
+}
+
+const male = new Male('Mateo', 'Navarro', 50, 'bachelors', [
+	'audi',
+	'honda',
+	'mercedes',
+]);
 
 // Object.create()
 

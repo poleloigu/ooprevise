@@ -11,5 +11,3 @@
 // Object.create()
 
 // Avoiding global variables
-
-// DOM element manipulation

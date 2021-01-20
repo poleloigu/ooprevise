@@ -107,7 +107,7 @@ class Adult extends Human {
 }
 const adult = new Adult('Jenny', 'De Buck', 39, 'master');
 
-// console.log(adult);
+console.log(adult);
 // console.log(adult.hello());
 // console.log(adult.humanGreeting());
 // console.log(adult.nationality);
@@ -130,6 +130,48 @@ const male = new Male('Mateo', 'Navarro', 50, 'bachelors', [
 	'honda',
 	'mercedes',
 ]);
+
+class PersonPrototypeExample {
+	constructor() {}
+}
+PersonPrototypeExample.prototype.name = 'Mike';
+PersonPrototypeExample.prototype.age = 28;
+PersonPrototypeExample.prototype.sayName = () => {
+	console.log(this.name);
+};
+
+const person1 = new PersonPrototypeExample();
+
+class PersonSharedExample {
+	constructor() {}
+}
+
+PersonSharedExample.prototype.name = 'John';
+PersonSharedExample.prototype.age = 26;
+PersonSharedExample.prototype.friends = ['Mia', 'Vanessa'];
+
+const person2 = new PersonSharedExample();
+const person3 = new PersonSharedExample();
+person2.friends.push('Kylie');
+
+// console.log(person2.friends);
+// console.log(person3.friends);
+
+class Person {
+	constructor() {
+		this.name = 'Jake';
+		this.age = 30;
+		this.friends = ['Me', 'Him'];
+	}
+}
+
+const person4 = new Person();
+const person5 = new Person();
+
+person4.friends.push('All of you');
+
+console.log(person4.friends);
+console.log(person5.friends);
 
 // Object.create()
 

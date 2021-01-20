@@ -28,6 +28,16 @@ const lastName = 'Hedge';
 console.log(`Her name is ${firstName} ${lastName}`);
 
 // ES5 & ES6 Classes
+function es5Class(firstName, lastName, age) {
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.age = age;
+	this.returnFullName = function () {
+		return `${this.firstName} ${this.lastName}`;
+	};
+}
+const es5 = new es5Class('Jake', 'Here', 25);
+console.log(es5);
 
 // Constructors
 

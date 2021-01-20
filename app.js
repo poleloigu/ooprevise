@@ -25,7 +25,7 @@ const sumX = () => {};
 
 const firstName = 'Mia';
 const lastName = 'Hedge';
-console.log(`Her name is ${firstName} ${lastName}`);
+// console.log(`Her name is ${firstName} ${lastName}`);
 
 // ES5 & ES6 Classes
 function es5Class(firstName, lastName, age) {
@@ -37,7 +37,7 @@ function es5Class(firstName, lastName, age) {
 	};
 }
 const es5 = new es5Class('Jake', 'Here', 25);
-console.log(es5);
+// console.log(es5);
 
 class es6Class {
 	constructor(firstName, lastName, age) {
@@ -50,7 +50,7 @@ class es6Class {
 	}
 }
 const es6 = new es6Class('Jake', 'There', 24);
-console.log(es6);
+// console.log(es6);
 
 // Constructors
 /**
@@ -71,11 +71,24 @@ class constructorExample {
 }
 const mom = new constructorExample('Martha');
 const dad = new constructorExample('Jacob');
-console.log(mom.sum);
-console.log(mom);
-console.log(dad);
+// console.log(mom.sum);
+// console.log(mom);
+// console.log(dad);
 
 // Prototypes & Inheritance
+class Human {
+	constructor(first, last, age) {
+		this.firstName = first;
+		this.lastName = last;
+		this.age = age;
+	}
+	hello() {
+		console.log('Hello, I am a human.');
+	}
+}
+const human = new Human('Jane', 'Doe', 20);
+
+Human.prototype.nationality = 'English';
 
 // Object.create()
 

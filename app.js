@@ -1,4 +1,20 @@
 // Object Literals
+const obj = {
+	name: 'Jake',
+	age: 25,
+	nickNames: ['J', 'Jakey'],
+	friendRatings: {
+		John: 5,
+		Amy: 10,
+		Nick: 3,
+	},
+	greet: function () {
+		console.log(
+			`Hello my name is ${this.name} but my friends call me ${this.nickNames[0]}`
+		);
+	},
+};
+obj.greet();
 
 // Let var const or function keywords
 

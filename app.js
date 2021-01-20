@@ -14,9 +14,18 @@ const obj = {
 		);
 	},
 };
-obj.greet();
+// obj.greet();
 
 // Let var const or function keywords
+var x = 1;
+const y = 10;
+let z = 5;
+function sum() {}
+const sumX = () => {};
+
+const firstName = 'Mia';
+const lastName = 'Hedge';
+console.log(`Her name is ${firstName} ${lastName}`);
 
 // ES5 & ES6 Classes
 

@@ -85,10 +85,32 @@ class Human {
 	hello() {
 		console.log('Hello, I am a human.');
 	}
+	humanGreeting() {
+		console.log('Human!!!');
+	}
 }
 const human = new Human('Jane', 'Doe', 20);
 
 Human.prototype.nationality = 'English';
+
+class Adult extends Human {
+	constructor(first, last, age, degree) {
+		super(first, last, age);
+		this.degree = degree;
+	}
+	hello() {
+		console.log('Hello, I am an adult');
+	}
+	adultGreeting() {
+		console.log('Adult!!!');
+	}
+}
+const adult = new Adult('Jenny', 'De Buck', 39, 'master');
+
+console.log(adult);
+console.log(adult.hello());
+console.log(adult.humanGreeting());
+console.log(adult.nationality);
 
 // Object.create()
 

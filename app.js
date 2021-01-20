@@ -29,7 +29,7 @@ console.log(`Her name is ${firstName} ${lastName}`);
 
 // ES5 & ES6 Classes
 function es5Class(firstName, lastName, age) {
-	this.firstName = firstName;
+	this.firstName = firstName || 'No name';
 	this.lastName = lastName;
 	this.age = age;
 	this.returnFullName = function () {
@@ -39,7 +39,41 @@ function es5Class(firstName, lastName, age) {
 const es5 = new es5Class('Jake', 'Here', 25);
 console.log(es5);
 
+class es6Class {
+	constructor(firstName, lastName, age) {
+		this.firstName = firstName || 'No name';
+		this.lastName = lastName;
+		this.age = age;
+		this.returnFullName = function () {
+			return `${this.firstName} ${this.lastName}`;
+		};
+	}
+}
+const es6 = new es6Class('Jake', 'There', 24);
+console.log(es6);
+
 // Constructors
+/**
+ * Classes are basically blueprints.
+ * It is a function that creates a new object with the blueprint you have given it.
+ *
+ */
+class constructorExample {
+	constructor(name) {
+		this.name = name;
+		this.role = function () {
+			console.log(`I am${name}`);
+		};
+	}
+	get sum() {
+		return this.name;
+	}
+}
+const mom = new constructorExample('Martha');
+const dad = new constructorExample('Jacob');
+console.log(mom.sum);
+console.log(mom);
+console.log(dad);
 
 // Prototypes & Inheritance
 

@@ -173,6 +173,12 @@ person4.friends.push('All of you');
 console.log(person4.friends);
 console.log(person5.friends);
 
+/**
+ * Problem with the constructor function: Every object has its own instance of the function.
+ * Problem wit hthe prototype: Modifying a property usinig one object reflects the other object aswell.
+ * To solve both problems, we can define all the object-specific properties iinside the constructor and all shared properties and methods inside the prototype.
+ */
+
 // Object.create()
 
 // Avoiding global variables

@@ -4,6 +4,28 @@ import {animalData} from './data/data.js';
  * 1.Get the data (promise)
  */
 
+const aPromise = new Promise((resolve, reject) => {
+	setTimeout(() => {
+		const promiseData = animalData;
+		if (promiseData) {
+			resolve(promiseData);
+		} else {
+			alert('Something failed');
+			reject(null);
+		}
+	}, 1000);
+});
+
+console.log('Here');
+aPromise.then((promisedData) => {
+	console.log(promisedData);
+});
+console.log('There');
+/**
+ *
+ * 2. Decided class properties.
+ */
+
 /**
  *
  * 3.Set data into classes
@@ -14,6 +36,10 @@ import {animalData} from './data/data.js';
  * 4.Display data
  */
 
+/**
+ *
+ * 5. async/promises image loading.
+ */
 const HTMLElementGenerator = (item, type) => {
 	// const wrapper = document.createElement('div');
 	// const heading = document.createElement('h2');

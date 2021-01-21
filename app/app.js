@@ -1,4 +1,5 @@
 import {animalData} from './data/data.js';
+import {Animal} from './classes/Animal.js';
 
 /**
  * 1.Get the data (promise)
@@ -18,18 +19,28 @@ const aPromise = new Promise((resolve, reject) => {
 
 console.log('Here');
 aPromise.then((promisedData) => {
-	console.log(promisedData);
+	setDataIntoClasses(promisedData);
 });
 console.log('There');
-/**
- *
- * 2. Decided class properties.
- */
 
 /**
  *
  * 3.Set data into classes
  */
+const setDataIntoClasses = (fetchedData) => {
+	const animals = fetchedData.map(
+		(animal) =>
+			new Animal(
+				animal.id,
+				animal.name,
+				animal.animal_name,
+				animal.scientific_name,
+				animal.type,
+				animal.description
+			)
+	);
+	console.log(animals);
+};
 
 /**
  *

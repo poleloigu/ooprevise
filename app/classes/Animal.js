@@ -16,15 +16,3 @@ export class Animal {
 		alert('I am an animal');
 	};
 }
-
-/**
-    {
-		id: 1,
-		name: 'Sileas',
-		animal_name: 'Hyena, striped',
-		scientific_name: 'Hyaena hyaena',
-		type: 'mammal',
-		description:
-			'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.',
-	},
- */

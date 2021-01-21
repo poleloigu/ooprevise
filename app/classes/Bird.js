@@ -1,5 +1,9 @@
-import {getRandomCountry} from '../data/countries';
-import {Animal} from './Animal';
+import {Animal} from './Animal.js';
+import {getRandomCountry} from './../data/countries.js';
+
+/**
+ * 2.Decide which setters and getters we need
+ */
 export class Bird extends Animal {
 	constructor(id, name, animal_name, scientific_name, type, description) {
 		super(id, name, animal_name, scientific_name, type, description);
@@ -12,6 +16,6 @@ export class Bird extends Animal {
 		};
 	}
 	birdGreeting = () => {
-		console.log('Im a bird and i fly');
+		console.log('Im a bird and I can fly.');
 	};
 }
